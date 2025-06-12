@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import CodeEditor from '../components/CodeEditor';
 import ReviewOutput from '../components/ReviewOutput';
 import Loader from '../components/Loader';
@@ -15,6 +16,20 @@ const Home = () => {
     const handleClearReview = () => {
   setReview('');
 };
+     useEffect(() => {
+    const pingServer = async () => {
+      try {
+        await axios.get('https://code-review-ai-server.onrender.com/api/ping');
+        console.log('Server woke up!');
+      } catch (error) {
+        console.error('Ping failed:', error);
+      }
+      console.log("Ping fired");
+    };
+    console.log("Ping fired");
+
+    pingServer();
+  }, []);
     const handleReview = async () => {
         setLoading(true);
         setError('');

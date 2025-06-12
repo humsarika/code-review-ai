@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL, // backend endpoint
+  baseURL: `https://code-review-ai-server.onrender.com`, // backend endpoint
 });
 
 export const getReview = (code) => {
