@@ -8,9 +8,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* ---------- Nav ----------- */
 .navbar {
-  width: 100%;
   background-color: #1e1e1e;
   color: #fff;
   display: flex;
@@ -26,7 +24,7 @@ body {
 .logo {
   font-size: 20px;
   font-weight: bold;
-  color: #378859; /* Green highlight */
+  color: #378859;
   cursor: pointer;
 }
 
@@ -38,18 +36,20 @@ body {
   padding: 0;
 }
 
-.nav-links li {
+.nav-links li a {
+  text-decoration: none; 
+  color: #fff;
   cursor: pointer;
   font-size: 16px;
   transition: color 0.3s ease;
 }
 
-.nav-links li:hover {
-  color: #378859; /* Green on hover */
+.nav-links li a:hover {
+  color: #378859;
 }
 
 /* Optional: Mobile Responsive */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -64,7 +64,7 @@ body {
   .nav-links li {
     margin: 10px 0;
   }
-}
+} */
 
 
 /* ----------home ----------- */
@@ -262,4 +262,50 @@ button:hover {
 
 .footer-links a:hover {
   color: #fff;
+}
+/* Small devices (phones) */
+@media (max-width: 600px) {
+    .navbar {
+        display: none;  /* Hide the navbar */
+    }
+
+    .home-container h2 {
+        font-size: 2.2rem;
+        padding: 10 10px;
+    }
+
+    .editor-container {
+        width: 70%;
+        margin: 20px;
+
+    }
+
+
+    .review-output {
+        width: 90%;
+        margin: 10px;
+    }
+
+    .about-section, .faq-container {
+        padding: 10px;
+        margin: 40px 20px;
+
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .faq-question {
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        font-size: 14px;
+    }
+    
+    .button {
+        width: 100%;
+        padding: 12px 0;
+    }
 }

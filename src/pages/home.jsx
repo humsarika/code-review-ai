@@ -31,7 +31,7 @@ const Home = () => {
     };
 
     return (
-        <div className='home-container'>
+        <div id="home" className='home-container'>
             <h2>AI Code Reviewer</h2>
             <h3>Paste your code here</h3>
             <CodeEditor code={code} setCode={setCode} />
