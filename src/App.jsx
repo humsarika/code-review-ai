@@ -1,5 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react";
+
 import Home from './pages/home';
 import About from './components/about';
 import FAQ from './components/faq';
@@ -19,6 +21,7 @@ const App = () => {
       <FAQ />
 
       <Footer />
+      <Analytics />
       </>
   );
 };
