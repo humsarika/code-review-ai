@@ -9,6 +9,7 @@ body {
     padding: 0;
 }
 .navbar {
+  width: auto;
   background-color: #1e1e1e;
   color: #fff;
   display: flex;
