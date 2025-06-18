@@ -51,6 +51,7 @@ const Home = () => {
             <h3>Paste your code here</h3>
             <CodeEditor code={code} setCode={setCode} />
             <Button onClick={handleReview} text="Get AI Review" />
+            
             {loading && <Loader />}
             {error && <ErrorMessage message={error} />}
             {
