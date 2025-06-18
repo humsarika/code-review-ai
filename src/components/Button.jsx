@@ -12,6 +12,7 @@ const Button = ({ onClick, text }) => {
         color: 'white',
         border: 'none',
         cursor: 'pointer'
+
       }}
     >
       {text}

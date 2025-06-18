@@ -4,7 +4,6 @@ import CodeEditor from '../components/CodeEditor';
 import ReviewOutput from '../components/ReviewOutput';
 import Loader from '../components/Loader';
 import ErrorMessage from '../components/ErrorMessage';
-import Button from '../components/Button';
 import { getReview } from '../services/api';
 
 
@@ -50,7 +49,8 @@ const Home = () => {
             <h2>AI Code Reviewer</h2>
             <h3>Paste your code here</h3>
             <CodeEditor code={code} setCode={setCode} />
-            <Button onClick={handleReview} text="Get AI Review" />
+            
+            <button onClick={handleReview}>Get AI Review</button>
             
             {loading && <Loader />}
             {error && <ErrorMessage message={error} />}
